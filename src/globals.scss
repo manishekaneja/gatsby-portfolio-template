@@ -1,0 +1,31 @@
+// Color Shades
+$primary: rgb(189, 227, 144);
+$primary-light: rgb(221, 241, 197);
+$secondary: #7176b0;
+$error: red;
+$white: white;
+$black: #333;
+
+//  Properties
+$shw: 0 0 10px rgba(0, 0, 0, 0.7);
+$scattered-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
+
+// z-index
+$header-level: 999;
+$footer-level: 999;
+
+// Section Size
+
+$header-height: 64px;
+$footer-height: 64px;
+$visible-screen-height: calc(100vh - 64px - 64px);
+
+$mobile-header-height: 64px;
+$mobile-footer-height: 20px;
+$mobile-visible-screen-height: calc(100vh - 64px - 20px);
+
+// Breakpoints
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 960px;
+$breakpoint-laptop: 1280px;
+$breakpoint-desktop: 1920px;

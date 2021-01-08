@@ -1,0 +1,26 @@
+@import "../../globals.scss";
+
+.full {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 36px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    margin: 4px;
+    background-color: $secondary;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.gutterBottom {
+  margin-bottom: 48px;
+}

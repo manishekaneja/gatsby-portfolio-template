@@ -1,0 +1,47 @@
+@import "../../globals.scss";
+.container {
+  margin: 0px auto;
+  min-height: $visible-screen-height;
+  padding: 10px 1.0875rem 1.45rem;
+  transition: 0.2s;
+  & > section {
+    max-width: 960px;
+    margin: auto;
+  }
+}
+
+.fullBackground {
+  background-color: $primary;
+}
+.partialBackground {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background-color: $primary;
+    height: 100%;
+    width: 40%;
+  }
+}
+.flx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .partialBackground {
+    position: relative;
+    &::after {
+      content: "";
+      height: 50vh;
+      width: 100%;
+    }
+  }
+  .container {
+    min-height: $mobile-visible-screen-height;
+  }
+}

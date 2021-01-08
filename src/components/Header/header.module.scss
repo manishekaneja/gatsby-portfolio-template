@@ -1,0 +1,137 @@
+@import "../../globals.scss";
+
+.header {
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  background: $white;
+  height: $header-height;
+  padding: 0px 35px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: $header-level;
+  & > div:first-child {
+    padding-left: 64px;
+  }
+}
+
+.headerCover {
+  height: $header-height;
+}
+.shw {
+  box-shadow: $shw;
+}
+
+.name {
+  text-transform: uppercase;
+  font-size: 24px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    margin: 4px;
+    background-color: $secondary;
+    width: 18px;
+    height: 18px;
+  }
+  a {
+    font-weight: 900;
+    color: $black;
+    text-decoration: none;
+  }
+}
+.name,
+.role {
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 100%;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 7px 35px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in, transform 0.2s linear,
+      color 0.2s ease-in;
+    &:hover {
+      background-color: $secondary;
+      color: white;
+      background-color: $secondary;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hide {
+  display: none;
+}
+
+.optionButton {
+  padding: 10px;
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .hide {
+    display: block;
+  }
+  .role {
+    flex: 1;
+  }
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 0px;
+    box-shadow: $shw;
+    & > div:first-child {
+      height: $header-height;
+      width: 100%;
+      align-items: center;
+      padding-left: 64px;
+      display: flex;
+    }
+    nav {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      & > a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .notVisible {
+    display: none !important;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header > div:first-child {
+    padding-left: 38px;
+  }
+}

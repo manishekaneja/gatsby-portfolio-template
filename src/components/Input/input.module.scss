@@ -1,0 +1,23 @@
+@import "../../globals.scss";
+
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  border-left: none;
+  outline: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-width: 2px;
+  background-color: transparent;
+}
+
+.fullWidth {
+  width: 100%;
+}

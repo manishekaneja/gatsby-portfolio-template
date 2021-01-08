@@ -1,0 +1,38 @@
+@import "../../globals.scss";
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  flex: 1;
+  box-shadow: $scattered-shadow;
+  max-width: 786px;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  padding: 60px 30px;
+  div {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      display: flex;
+      flex: 2;
+    }
+    p {
+      padding: 0px 15px;
+      text-align: justify;
+      text-indent: 50px;
+    }
+  }
+}
+.img {
+  border-radius: 50%;
+  outline: none;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 40px;
+}

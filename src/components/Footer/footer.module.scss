@@ -1,0 +1,26 @@
+@import "../../globals.scss";
+
+.footer {
+  width: 100%;
+  margin-top: 2rem;
+  height: $footer-height;
+  position: fixed;
+  bottom: 0px;
+  background-color: $white;
+  z-index: $footer-level;
+}
+
+.shw {
+  box-shadow: $shw;
+}
+.footerCover {
+  height: $footer-height;
+  width: 100%;
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .footerCover,
+  .footer {
+    height: $mobile-footer-height;
+  }
+}

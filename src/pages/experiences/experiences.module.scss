@@ -1,0 +1,50 @@
+@import "../../globals.scss";
+.card {
+  background-color: $white;
+  box-shadow: $scattered-shadow;
+  max-width: 786px;
+  min-height: 375px;
+  margin: auto;
+  padding: 60px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-rows: 40px 1fr 20px;
+  row-gap: 7px;
+  grid-template-columns: 275px 1fr;
+  div {
+    flex: 3;
+    &:first-child {
+      display: flex;
+      flex: 2;
+    }
+  }
+}
+
+.timeline {
+  font-weight: 900;
+  color: $secondary;
+  font-size: 20px;
+  grid-column: 1/3;
+  text-align: start;
+}
+.position {
+  text-align: start;
+  grid-column: 1/1;
+  & > p {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $secondary;
+    font-size: 14px;
+  }
+}
+.companyName {
+  font-size: 14px;
+  text-align: start;
+  grid-column: 1/3;
+  p {
+    font-weight: 900;
+  }
+}
+.description {
+  grid-column: 2/3;
+}
