@@ -1,6 +1,6 @@
-import React from "react"
-import AboutMePage from "./about-me"
+import React from "react";
+import AboutMePage from "./about-me";
 
-const IndexPage = () => <AboutMePage />
+const IndexPage = () => <AboutMePage />;
 
-export default IndexPage
+export default IndexPage;

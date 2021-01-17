@@ -64,7 +64,7 @@ const KnowledgePage = () => {
   // }, [nodeDivRef]);
   return (
     <Layout backgroundType="full">
-      <SEO title="Home" />
+      <SEO title="Knowledge | Manish Aneja" />
       <div className={classes.container}>
         <section className={classes.top}>
           <PageTitle title="Knowledge" gutterBottom />

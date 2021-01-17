@@ -23,7 +23,7 @@ const AboutMePage = () => {
   `);
   return (
     <Layout backgroundType="full">
-      <SEO title="Home" />
+      <SEO title="Projects | Manish Aneja" />
       <section>
         <PageTitle title="Projects" gutterBottom />
         {([

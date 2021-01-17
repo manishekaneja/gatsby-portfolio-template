@@ -56,7 +56,7 @@ const ContactMePage = () => {
 
   return (
     <Layout backgroundType="blocked">
-      <SEO title="Home" />
+      <SEO title="Contact Me | Manish Aneja" />
       <section>
         <PageTitle title="Lets Talk" gutterBottom />
         {serverState.status ? (

@@ -7,7 +7,7 @@ import { Experiences } from "./type";
 
 const ExperiencesPage = () => (
   <Layout backgroundType="full">
-    <SEO title="Home" />
+    <SEO title="Experience | Manish Aneja" />
     <section>
       <PageTitle title="Experiences" gutterBottom />
       {([
