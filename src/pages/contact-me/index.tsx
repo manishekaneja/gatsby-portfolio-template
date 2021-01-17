@@ -60,8 +60,20 @@ const ContactMePage = () => {
       <section>
         <PageTitle title="Lets Talk" gutterBottom />
         {serverState.status ? (
-          <div className={classes.card}>
-            <h2>Thanks for Contacting</h2>
+          <div
+            className={classes.card}
+            style={{ display: "flex", flexDirection: "column" }}
+          >
+            {serverState.status.ok ? (
+              <h2>Thanks for Contacting</h2>
+            ) : (
+              <>
+                <h2 style={{ color: "red" }}>Error in Messaging Service</h2>
+                <h4>
+                  Drop me a mail at <em>manishekaneja@gmail.com</em>
+                </h4>
+              </>
+            )}
           </div>
         ) : (
           <form className={classes.card} onSubmit={handleOnSubmit}>
