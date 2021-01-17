@@ -7,10 +7,10 @@ const Input: FC<
   > & {
     label: string;
     identifier: string;
-    onChangeAction: (
+    onChangeAction?: (
       event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => void;
-    value: string;
+    value?: string;
     multiline?: boolean;
     rows?: number;
   }
@@ -31,17 +31,21 @@ const Input: FC<
       {multiline ? (
         <textarea
           className={classes.input}
-          value={value}
           name={identifier}
-          onChange={onChangeAction}
+          {...{
+            ...(value ? { value } : {}),
+            ...(onChangeAction ? { onChange: onChangeAction } : {}),
+          }}
           rows={rows}
         />
       ) : (
         <input
           className={classes.input}
-          value={value}
+          {...{
+            ...(value ? { value } : {}),
+            ...(onChangeAction ? { onChange: onChangeAction } : {}),
+          }}
           name={identifier}
-          onChange={onChangeAction}
         />
       )}
     </div>
