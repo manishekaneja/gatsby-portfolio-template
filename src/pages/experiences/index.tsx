@@ -64,8 +64,8 @@ const ExperiencesCard: FC<{ experience: Experiences }> = ({ experience }) => {
           <p>{experience.postion}</p>
         </div>
         <div className={classes.description}>
-          {experience.description.map((desc: string) => (
-            <p>{desc}</p>
+          {experience.description.map((desc: string, idx: number) => (
+            <p key={idx}>{desc}</p>
           ))}
         </div>
         <div className={classes.companyName}>

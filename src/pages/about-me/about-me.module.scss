@@ -67,3 +67,45 @@
   margin-bottom: 40px;
   box-shadow: $scattered-shadow;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .section {
+    flex-direction: column;
+    padding-left: 0px;
+    & > article:first-child {
+      margin-top: 10vh;
+      margin-bottom: 40%;
+    }
+    & > article:last-child {
+      margin-bottom: 40vh;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+@media (max-width: $breakpoint-mobile) {
+  .section {
+    & > article:first-child {
+      min-width: 300px;
+      max-width: 300px;
+      img {
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+    & > article:last-child {
+      padding-left: 0px;
+      padding-right: 0px;
+      & > p {
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        padding-left: 20px;
+        text-indent: 20px;
+      }
+    }
+  }
+  .img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}

@@ -31,3 +31,8 @@
   align-self: flex-end;
   justify-self: flex-end;
 }
+@media (max-width: $breakpoint-mobile) {
+  .card {
+    padding: 50px 30px 20px 30px;
+  }
+}

@@ -3,4 +3,5 @@ type Project = {
   name: string;
   oneLiner: string;
   description: string[];
+  imgObj: any;
 };

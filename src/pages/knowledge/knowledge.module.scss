@@ -29,10 +29,99 @@
     }
   }
 }
+.container {
+  position: relative;
+  min-height: calc(100vh - 64px - 64px - 40px);
+}
 .img {
   border-radius: 50%;
   outline: none;
   height: 250px;
   width: 250px;
   margin-bottom: 40px;
+  transition: 2s;
+  animation: hoverRotation 10s infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.img:hover {
+  animation-play-state: running;
+}
+@keyframes hoverRotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.htmlImgCard,
+.cssImgCard,
+.nodeImgCard,
+.gitImgCard {
+  position: absolute;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.htmlImgCard {
+  top: 20px;
+  right: 225px;
+  border-radius: 7px;
+  transform: scale(0.4);
+
+  img {
+    width: 100px;
+  }
+}
+
+.cssImgCard {
+  bottom: 40px;
+  left: 420px;
+  transform: scale(0.6);
+  img {
+    width: 100px;
+  }
+}
+.nodeImgCard {
+  bottom: 150px;
+  right: 450px;
+  z-index: 0;
+  transform: scale(0.65);
+  img {
+    width: 100px;
+  }
+}
+
+.gitImgCard {
+  top: 100px;
+  left: 220px;
+  transform: scale(0.6);
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .card {
+    flex-direction: column;
+    padding: 40px;
+  }
+  .img {
+    min-height: 250px;
+  }
+  .htmlImgCard,
+  .cssImgCard,
+  .nodeImgCard,
+  .gitImgCard {
+    display: none;
+  }
+}
+@media (max-width: $breakpoint-mobile) {
+  .card {
+    padding: 10px;
+    div p {
+      text-indent: 30px;
+    }
+  }
 }
