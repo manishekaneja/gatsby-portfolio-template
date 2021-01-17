@@ -100,8 +100,8 @@
 @media (max-width: $breakpoint-mobile) {
   .section {
     & > article:first-child {
-      min-width: 375px;
-      max-width: 375px;
+      min-width: 300px;
+      max-width: 300px;
     }
     & > article:last-child {
       padding-left: 0px;
