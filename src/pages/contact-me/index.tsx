@@ -55,7 +55,7 @@ const ContactMePage = () => {
   };
 
   return (
-    <Layout backgroundType="blocked">
+    <Layout backgroundType="end">
       <SEO title="Contact Me | Manish Aneja" />
       <section>
         <PageTitle title="Lets Talk" gutterBottom />

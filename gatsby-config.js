@@ -17,13 +17,14 @@ module.exports = {
     //     ],
     //   },
     // },
+    "gatsby-plugin-postcss",
     {
-      resolve:"gatsby-plugin-google-analytics",
-      options:{
-        trackingId:"G-GZ2HZ9G4Y4",
-        head:true,
-        anonymize:true
-      }
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-GZ2HZ9G4Y4",
+        head: true,
+        anonymize: true,
+      },
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,

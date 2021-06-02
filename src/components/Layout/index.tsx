@@ -9,36 +9,25 @@ import React, { FC } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
 import "./global.css";
-import classes from "./layout.module.scss";
+import "./layout.css";
 
 const Layout: FC<{
   children: React.ReactNode;
-  backgroundType: "full" | "blocked";
+  backgroundType: "full" | "start" | "end";
   withFlex?: boolean;
 }> = ({ children, backgroundType, withFlex = false }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
-      <Header withShadow={backgroundType === "full"} />
+      <Header />
       <main
-        className={`${classes.container} ${
-          backgroundType === "full" ? classes.fullBackground : ""
-        } ${backgroundType === "blocked" ? classes.partialBackground : ""} ${
-          withFlex ? classes.flx : ""
-        }`}
+        className={` m-0 p-0 w-full ${backgroundType} ${
+          withFlex ? " flex items-center justify-center " : ""
+        } `}
+        style={{ minHeight: "calc( 100vh  - 2.5rem - 4rem )" }}
       >
-        {children}
+        <div className="max-w-5xl m-auto mt-0">{children}</div>
       </main>
-      <Footer withShadow={backgroundType === "full"} />
+      <Footer />
     </>
   );
 };

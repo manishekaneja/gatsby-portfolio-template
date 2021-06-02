@@ -1,0 +1,30 @@
+.full {
+  @apply bg-primary;
+}
+.start,
+.end {
+  position: relative;
+  @apply bg-primary md:bg-transparent;
+}
+
+.start::after {
+  @apply bg-primary;
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  height:100%;
+  width: 60%;
+}
+
+.end::after {
+  @apply bg-primary;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  height: 100%;
+  width: 40%;
+}
