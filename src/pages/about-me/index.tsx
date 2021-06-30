@@ -17,7 +17,7 @@ const AboutMePage = () => {
     }
   `);
   return (
-    <Layout backgroundType="blocked" withFlex>
+    <Layout backgroundType="start" withFlex>
       <SEO title="Manish Aneja" />
       <section className={classes.section}>
         <article>

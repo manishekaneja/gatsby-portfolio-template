@@ -1,7 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React, { Fragment, useState } from "react";
-import classes from "./header.module.scss";
 
 type NavObj = {
   title: string;
@@ -31,7 +30,7 @@ const navigaionPanel: NavObj[] = [
   },
 ];
 
-const Header: React.FC<{ withShadow: boolean }> = ({ withShadow }) => {
+const Header: React.FC<{}> = () => {
   const [menuState, setMenuState] = useState(true);
   const data = useStaticQuery(graphql`
     query HeaderQuery {
@@ -54,18 +53,15 @@ const Header: React.FC<{ withShadow: boolean }> = ({ withShadow }) => {
 
   return (
     <Fragment>
-      <div className={classes.headerCover} />
-      <header className={`${classes.header} ${withShadow ? classes.shw : ""}`}>
-        <div>
-          <span className={classes.name}>
-            <Link to="/">Manish Aneja</Link> /
-          </span>
-          <span className={classes.role}>Developer</span>
+      <div className="h-16" />
+      <header className="bg-light h-16 flex items-center justify-center py-0 px-9 fixed top-0 left-0 w-full z-50">
+        <div className="pl-16 uppercase text-dark">
+          <Link to="/" className="text-2xl">
+            <span>Manish Aneja</span>
+          </Link>
+          <span className="text-2xl font-medium">/</span>
+          <span className="m-0 font-black">Developer</span>
           {/* <span
-          className={classes.hide}
-          style={{ display: "inline-flex", flex: 1, backgroundColor: "green" }}
-        /> */}
-          <span
             onClick={() => setMenuState(ps => !ps)}
             className={`${classes.hide} ${classes.optionButton}`}
           >
@@ -76,11 +72,11 @@ const Header: React.FC<{ withShadow: boolean }> = ({ withShadow }) => {
             ) : !data?.placeholderImage?.childImageSharp?.fixed ? null : (
               <Img fixed={data.placeholderImage.childImageSharp.fixed} />
             )}
-          </span>
+          </span> */}
         </div>
         <nav
-          className={`${classes.navigation} ${
-            menuState ? classes.notVisible : ""
+          className={`flex flex-1 justify-end items-stretch h-full ${
+            menuState ? "" : "hidden"
           }`}
         >
           {navigaionPanel.map((menuOption: NavObj) => (
@@ -88,6 +84,7 @@ const Header: React.FC<{ withShadow: boolean }> = ({ withShadow }) => {
               key={menuOption.path}
               to={menuOption.path}
               onClick={() => setMenuState(false)}
+              className="flex justify-center items-center cursor-pointer uppercase py-2 px-7 transition-colors ease-linear duration-150 hover:bg-secondary hover:text-light"
             >
               <span>{menuOption.title}</span>
             </Link>
